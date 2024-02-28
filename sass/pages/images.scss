@@ -1,0 +1,32 @@
+#images {
+    #img_desktop {
+        display: flex;
+        flex-direction: row;
+        
+        img {
+            width: 25%;
+        }
+        @media screen and (max-width : map-get($breakpoints, mobile)) {
+            display: none;
+        }
+        
+    }
+    #img_mobile {
+        display: none;
+        @media screen and (max-width: map-get($breakpoints, mobile)) {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+
+            .row {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+
+                img {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}

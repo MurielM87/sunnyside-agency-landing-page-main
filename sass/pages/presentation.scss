@@ -1,0 +1,119 @@
+#presentation {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  .category {
+    width: 50%;
+    margin-top: -4px;
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+      width: 100%;
+      position: relative;
+    }
+
+    &:nth-child(1),
+    &:nth-child(4) {
+      padding: 100px;
+      @media screen and (max-width: map-get($breakpoints, mobile)) {
+        padding: 0;
+      }
+    }
+
+    h2 {
+      font-size: 40px;
+      font-family: "Fraunces", sans-serif;
+      margin-right: 150px;
+      margin-bottom: 50px;
+      @media screen and (max-width: map-get($breakpoints, mobile)) {
+        margin: 40px;
+        font-size: 30px;
+        text-align: center;
+      }
+    }
+    .text {
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 50px;
+      @media screen and (max-width : map-get($breakpoints, mobile)) {
+        text-align: center;
+        margin: 20px;
+        font-size: 15px;
+      }
+    }
+    .learn {      
+      font-family: "Fraunces", sans-serif;
+      font-weight: 900;
+      position: relative;
+      text-transform: uppercase;
+
+      &:hover.learn_yellow {
+        background-color: $yellow;
+        width: 90px;
+        height: 6px;
+        border-radius: 50px;
+      }
+      @media screen and (max-width : map-get($breakpoints, mobile)){
+        text-align: center;
+        margin: 70px;
+      }
+    }
+    #transform_desktop,
+    #stand_out_desktop,
+    #graphic_design_desktop, #photography_desktop {
+      display: block;
+      @media screen and (max-width: map-get($breakpoints, mobile)) {
+        display: none;
+      }
+    }
+    #transform_mobile,
+    #stand_out_mobile,
+    #graphic_design_mobile,
+    #photography_mobile {
+      display: none;
+      @media screen and (max-width: map-get($breakpoints, mobile)) {
+        display: block;
+        width: 100%;
+      }
+    }
+    .graphic_text,
+    .photography_text {
+      text-align: center;
+      width: 30%;
+      line-height: 25px;
+      @media screen and (max-width : map-get($breakpoints, mobile)) {
+        width: 90%;
+      }
+
+      h3 {
+        font-family: "Fraunces", sans-serif;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+    }
+    .graphic_text {
+      position: absolute;
+      left: 10%;
+      bottom: 0;
+      @media screen and (max-width: map-get($breakpoints, mobile)) {
+        left: 0;
+        width: 90%;
+        padding-bottom: 30px;
+        font-size: 14px;
+      }
+    }
+    .photography_text {
+      position: absolute;
+      right: 10%;
+      bottom: 0;
+      @media screen and (max-width: map-get($breakpoints, mobile)) {
+        width: 90%;
+        padding-bottom: 30px;
+        font-size: 14px;
+      }
+    }
+  }
+}

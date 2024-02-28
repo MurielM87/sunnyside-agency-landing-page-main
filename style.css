@@ -1,0 +1,491 @@
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 1440px;
+  font-family: "Barlow", sans-serif;
+}
+
+.container {
+  width: 1440px;
+}
+@media screen and (max-width: 375px) {
+  .container {
+    width: 100%;
+  }
+}
+
+header {
+  width: 100%;
+  position: relative;
+}
+header #img_header_desktop {
+  object-fit: cover;
+}
+@media screen and (max-width: 375px) {
+  header #img_header_desktop {
+    display: none;
+  }
+}
+header #img_header_mobile {
+  display: none;
+}
+@media screen and (max-width: 375px) {
+  header #img_header_mobile {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+header #header {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+header #header h1 {
+  font-size: 40px;
+  font-family: "Fraunces", sans-serif;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+  margin-top: 70px;
+}
+header #header #icon_arrow_down {
+  display: flex;
+  margin: auto;
+  height: 140px;
+  margin-top: 160px;
+}
+@media screen and (max-width: 375px) {
+  header #header #icon_arrow_down {
+    margin-top: 20px;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(168, 34%, 41%);
+  padding: 20px;
+}
+footer #footer_name {
+  font-size: 40px;
+  font-weight: 900;
+  color: var(hsl(167, 40%, 24%));
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 375px) {
+  footer .info {
+    width: 90%;
+  }
+}
+footer .info ul {
+  width: 700px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  list-style: none;
+}
+@media screen and (max-width: 375px) {
+  footer .info ul {
+    width: 100%;
+  }
+}
+footer .info ul li:hover {
+  color: hsl(0, 0%, 100%);
+}
+footer .info ul .remove {
+  display: flex;
+}
+@media screen and (max-width: 375px) {
+  footer .info ul .remove {
+    display: none;
+  }
+}
+footer #social_network {
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media screen and (max-width: 375px) {
+  footer #social_network {
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+}
+footer #social_network i {
+  font-size: 18px;
+  color: hsl(167, 40%, 24%);
+}
+footer #social_network i:hover {
+  color: hsl(0, 0%, 100%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+#nav_barre {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+@media screen and (max-width: 375px) {
+  #nav_barre {
+    flex-direction: column;
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 375px) {
+  #nav_barre #logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+#nav_barre #logos #header_logo {
+  height: 50px;
+  margin-left: 20px;
+}
+@media screen and (max-width: 375px) {
+  #nav_barre #logos #header_logo {
+    height: 30px;
+  }
+}
+#nav_barre #logos #hamburger_menu {
+  display: none;
+}
+@media screen and (max-width: 375px) {
+  #nav_barre #logos #hamburger_menu {
+    display: flex;
+    margin-right: 20px;
+  }
+}
+#nav_barre .show {
+  display: flex;
+}
+#nav_barre nav {
+  width: 30%;
+}
+@media screen and (max-width: 375px) {
+  #nav_barre nav {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 15px;
+  }
+}
+#nav_barre nav #cube {
+  display: none;
+}
+@media screen and (max-width: 375px) {
+  #nav_barre nav #cube {
+    display: flex;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 0 20px 20px;
+    border-color: transparent transparent hsl(0, 0%, 100%) transparent;
+    transform: rotate(0deg);
+    margin-left: 93%;
+  }
+}
+#nav_barre nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  color: hsl(0, 0%, 100%);
+}
+@media screen and (max-width: 375px) {
+  #nav_barre nav ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(232, 10%, 55%);
+  }
+}
+#nav_barre nav ul li {
+  font-size: 20px;
+  border-radius: 20px;
+  padding: 10px 15px;
+}
+@media screen and (max-width: 375px) {
+  #nav_barre nav ul li {
+    margin: 15px;
+  }
+}
+#nav_barre nav ul li:hover {
+  cursor: pointer;
+  background-color: hsl(0, 0%, 100%);
+}
+@media screen and (max-width: 375px) {
+  #nav_barre nav ul li:hover {
+    background-color: hsl(51, 100%, 49%);
+  }
+}
+#nav_barre nav ul li a {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
+#nav_barre nav ul li a:hover {
+  color: hsl(212, 27%, 19%);
+}
+@media screen and (max-width: 375px) {
+  #nav_barre nav ul li a {
+    color: hsl(210, 4%, 67%);
+  }
+  #nav_barre nav ul li a:hover {
+    color: hsl(212, 27%, 19%);
+  }
+}
+
+#presentation {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 375px) {
+  #presentation {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+}
+#presentation .category {
+  width: 50%;
+  margin-top: -4px;
+}
+@media screen and (max-width: 375px) {
+  #presentation .category {
+    width: 100%;
+    position: relative;
+  }
+}
+#presentation .category:nth-child(1), #presentation .category:nth-child(4) {
+  padding: 100px;
+}
+@media screen and (max-width: 375px) {
+  #presentation .category:nth-child(1), #presentation .category:nth-child(4) {
+    padding: 0;
+  }
+}
+#presentation .category h2 {
+  font-size: 40px;
+  font-family: "Fraunces", sans-serif;
+  margin-right: 150px;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 375px) {
+  #presentation .category h2 {
+    margin: 40px;
+    font-size: 30px;
+    text-align: center;
+  }
+}
+#presentation .category .text {
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 375px) {
+  #presentation .category .text {
+    text-align: center;
+    margin: 20px;
+    font-size: 15px;
+  }
+}
+#presentation .category .learn {
+  font-family: "Fraunces", sans-serif;
+  font-weight: 900;
+  position: relative;
+  text-transform: uppercase;
+}
+#presentation .category .learn:hover.learn_yellow {
+  background-color: hsl(51, 100%, 49%);
+  width: 90px;
+  height: 6px;
+  border-radius: 50px;
+}
+@media screen and (max-width: 375px) {
+  #presentation .category .learn {
+    text-align: center;
+    margin: 70px;
+  }
+}
+#presentation .category #transform_desktop,
+#presentation .category #stand_out_desktop,
+#presentation .category #graphic_design_desktop, #presentation .category #photography_desktop {
+  display: block;
+}
+@media screen and (max-width: 375px) {
+  #presentation .category #transform_desktop,
+  #presentation .category #stand_out_desktop,
+  #presentation .category #graphic_design_desktop, #presentation .category #photography_desktop {
+    display: none;
+  }
+}
+#presentation .category #transform_mobile,
+#presentation .category #stand_out_mobile,
+#presentation .category #graphic_design_mobile,
+#presentation .category #photography_mobile {
+  display: none;
+}
+@media screen and (max-width: 375px) {
+  #presentation .category #transform_mobile,
+  #presentation .category #stand_out_mobile,
+  #presentation .category #graphic_design_mobile,
+  #presentation .category #photography_mobile {
+    display: block;
+    width: 100%;
+  }
+}
+#presentation .category .graphic_text,
+#presentation .category .photography_text {
+  text-align: center;
+  width: 30%;
+  line-height: 25px;
+}
+@media screen and (max-width: 375px) {
+  #presentation .category .graphic_text,
+  #presentation .category .photography_text {
+    width: 90%;
+  }
+}
+#presentation .category .graphic_text h3,
+#presentation .category .photography_text h3 {
+  font-family: "Fraunces", sans-serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+#presentation .category .graphic_text {
+  position: absolute;
+  left: 10%;
+  bottom: 0;
+}
+@media screen and (max-width: 375px) {
+  #presentation .category .graphic_text {
+    left: 0;
+    width: 90%;
+    padding-bottom: 30px;
+    font-size: 14px;
+  }
+}
+#presentation .category .photography_text {
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+}
+@media screen and (max-width: 375px) {
+  #presentation .category .photography_text {
+    width: 90%;
+    padding-bottom: 30px;
+    font-size: 14px;
+  }
+}
+
+#clients_testimonials {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+#clients_testimonials h4 {
+  font-size: 22px;
+  text-align: center;
+  margin: 110px auto 30px;
+  text-transform: uppercase;
+  color: hsl(232, 10%, 55%);
+}
+@media screen and (max-width: 375px) {
+  #clients_testimonials h4 {
+    margin: auto;
+  }
+}
+#clients_testimonials #testimonials {
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (max-width: 375px) {
+  #clients_testimonials #testimonials {
+    flex-direction: column;
+  }
+}
+#clients_testimonials #testimonials .client {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 40px;
+}
+@media screen and (max-width: 375px) {
+  #clients_testimonials #testimonials .client {
+    width: 90%;
+  }
+}
+#clients_testimonials #testimonials .client img {
+  width: 50px;
+  border-radius: 50%;
+  margin-bottom: 45px;
+}
+#clients_testimonials #testimonials .client .comment {
+  text-align: center;
+  margin-bottom: 30px;
+  line-height: 25px;
+}
+#clients_testimonials #testimonials .client .name {
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+#clients_testimonials #testimonials .client .job {
+  color: hsl(232, 10%, 55%);
+}
+
+#images #img_desktop {
+  display: flex;
+  flex-direction: row;
+}
+#images #img_desktop img {
+  width: 25%;
+}
+@media screen and (max-width: 375px) {
+  #images #img_desktop {
+    display: none;
+  }
+}
+#images #img_mobile {
+  display: none;
+}
+@media screen and (max-width: 375px) {
+  #images #img_mobile {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  #images #img_mobile .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  #images #img_mobile .row img {
+    width: 50%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

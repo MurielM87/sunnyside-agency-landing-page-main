@@ -1,0 +1,47 @@
+header {
+  width: 100%;
+  position: relative;
+
+  #img_header_desktop {
+    object-fit: cover;
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+      display: none;
+    }
+  }
+  #img_header_mobile {
+    display: none;
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  #header {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;    
+
+    h1 {
+      font-size: 40px;
+      font-family: "Fraunces", sans-serif;
+      font-weight: 900;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      text-align: center;
+      color: $white;
+      margin-top: 70px;
+    }
+    #icon_arrow_down {
+      display: flex;
+      margin: auto;
+      height: 140px;
+      margin-top: 160px;
+      @media screen and (max-width: map-get($breakpoints, mobile)) {
+        margin-top: 20px;
+      }
+    }
+  }
+}

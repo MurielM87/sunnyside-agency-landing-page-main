@@ -1,0 +1,106 @@
+#nav_barre {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    flex-direction: column;
+    margin-top: 40px;
+  }
+
+  #logos {
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    #header_logo {
+      height: 50px;
+      margin-left: 20px;
+      @media screen and (max-width: map-get($breakpoints, mobile)) {
+        height: 30px;
+      }
+    }
+    #hamburger_menu {
+      display: none;
+      @media screen and (max-width: map-get($breakpoints, mobile)) {
+        display: flex;
+        margin-right: 20px;
+      }
+    }
+  }
+
+      .show {
+        display: flex;
+      }
+  nav {
+    width: 30%;
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      width: 90%;
+      margin-top: 20px;
+      margin-left: 15px;
+
+    }
+
+    #cube {
+      display: none;
+      @media screen and (max-width: map-get($breakpoints, mobile)) {
+        display: flex;
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 0 0 20px 20px;
+        border-color: transparent transparent $white transparent;
+        transform: rotate(0deg);
+        margin-left: 93%;
+      }
+    }
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      list-style: none;
+      color: $white;
+      @media screen and (max-width: map-get($breakpoints, mobile)) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $white;
+        color: $dark_grayish_blue;
+      }
+
+      li {
+        font-size: 20px;
+        border-radius: 20px;
+        padding: 10px 15px;
+        @media screen and (max-width: map-get($breakpoints, mobile)) {
+          margin: 15px;
+        }
+        &:hover {
+          cursor: pointer;
+          background-color: $white;
+          @media screen and (max-width: map-get($breakpoints, mobile)) {
+            background-color: $yellow;
+          }
+        }
+        a {
+          color: $white;
+          text-decoration: none;
+          &:hover {
+            color: $very_dark_desaturated_blue;
+          }
+          @media screen and (max-width: map-get($breakpoints, mobile)) {
+            color: $grayish_blue;
+            &:hover {
+              color: $very_dark_desaturated_blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
